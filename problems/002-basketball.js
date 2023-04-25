@@ -16,7 +16,20 @@
  * @returns {(number|undefined)}
  */
 function getWinner(points) {
-    return undefined;
+let newAr = points.join('-').split('-').map(Number)
+let count = 0
+let secondCount = 0
+
+for (let i = 0; i < newAr.length;i++) {
+  if(i % 2 === 0) {
+    count += newAr[i]
+  } else {
+    secondCount += newAr[i]
+}
+}
+if (count === secondCount)
+return undefined;
+return count > secondCount ? 1:2
 }
 
 module.exports = getWinner;

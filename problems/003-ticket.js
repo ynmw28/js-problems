@@ -14,7 +14,9 @@
  * @returns {boolean}
  */
 function checkTicket(number) {
-    return undefined;
+  let firstSum = Number(number[0]) + Number(number[1]) + Number(number[2])
+  let secondSum = Number(number[3]) + Number(number[4])+ Number(number[5])
+  return firstSum === secondSum
 }
 
 module.exports = checkTicket;
