@@ -12,7 +12,12 @@
  * @returns {number|undefined}
  */
 function getPower(n) {
-    return -1;
+    const res = Math.log(n) / Math.log(2);
+    if (res === parseInt(res)) {
+        return res
+    } else {
+        return undefined
+    }
 }
 
 module.exports = getPower;
